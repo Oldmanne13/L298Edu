@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <style>
+    .h { font: 700 22px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .hh { font: 700 16px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .t { font: 400 14px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .box { fill:#f8f9fa; stroke:#222; stroke-width:2; }
+    .pin { fill:#e3f2fd; stroke:#1565c0; stroke-width:1.5; rx:6; }
+    .pwr { fill:#fff3cd; stroke:#b08900; stroke-width:1.5; rx:6; }
+    .warn { font: 400 12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#555; }
+    .note { font: 400 12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#333; }
+    .sep { stroke:#aaa; stroke-dasharray:4 4; }
+  </style>
+
+  <!-- Board -->
+  <rect class="box" x="40" y="40" width="900" height="480" rx="14"/>
+  <text class="h" x="60" y="78">L298Edu – oversigt (illustration)</text>
+
+  <!-- Motor A sektion -->
+  <text class="hh" x="70" y="120">Motor A (L298)</text>
+  <rect class="pin" x="70" y="130" width="230" height="110"/>
+  <text class="t" x="85" y="160">IN1  →  micro:bit P12</text>
+  <text class="t" x="85" y="185">IN2  →  micro:bit P13</text>
+  <text class="t" x="85" y="210">ENA (PWM) → P2</text>
+  <text class="note" x="85" y="235">Udgang til motor: M1+ / M1−</text>
+
+  <!-- Motor B sektion -->
+  <text class="hh" x="70" y="280">Motor B (L298)</text>
+  <rect class="pin" x="70" y="290" width="230" height="110"/>
+  <text class="t" x="85" y="320">IN3  →  micro:bit P14</text>
+  <text class="t" x="85" y="345">IN4  →  micro:bit P15</text>
+  <text class="t" x="85" y="370">ENB (PWM) → P8</text>
+  <text class="note" x="85" y="395">Udgang til motor: M2+ / M2−</text>
+
+  <!-- P1: Servo/NeoPixel -->
+  <text class="hh" x="360" y="120">P1 – Servo / NeoPixel</text>
+  <rect class="pin" x="360" y="130" width="260" height="110"/>
+  <text class="t" x="375" y="160">Signal → micro:bit P1</text>
+  <text class="t" x="375" y="185">Brug blok: “P1 → Servo/NeoPixel”</text>
+  <text class="note" x="375" y="210">Kun én funktion ad gangen</text>
+
+  <!-- HC-SR04 -->
+  <text class="hh" x="360" y="280">Ultralyd (HC-SR04)</text>
+  <rect class="pin" x="360" y="290" width="260" height="110"/>
+  <text class="t" x="375" y="320">TRIG → micro:bit P16</text>
+  <text class="t" x="375" y="345">ECHO → micro:bit P10</text>
+  <text class="note" x="375" y="370">Fælles GND (sensor ↔ shield ↔ micro:bit)</text>
+
+  <!-- Forsyning -->
+  <text class="hh" x="660" y="120">Forsyning</text>
+  <rect class="pwr" x="660" y="130" width="260" height="110"/>
+  <text class="t" x="675" y="160">GND (fælles)</text>
+  <text class="t" x="675" y="185">3V / 5V (afhænger af last)</text>
+  <text class="note" x="675" y="210">Servomotorer/WS2812 kræver egen strøm</text>
+
+  <!-- Noter -->
+  <line class="sep" x1="60" y1="430" x2="920" y2="430"/>
+  <text class="warn" x="60" y="455">• P1 kan ikke bruges til Servo og NeoPixel samtidig.</text>
+  <text class="warn" x="60" y="475">• micro:bit knapper A/B ligger på P5/P11; I²C på P19/P20 (hold disse frie til andre moduler).</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "name": "L298Edu",
+  "description": "Motor A/B (basis) + P1 Servo/NeoPixel og ultralyd (avanceret) til micro:bit.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "dependencies": {
+    "core": "*",
+    "radio": "*",
+    "neopixel": "github:microsoft/pxt-neopixel"
+  },
+  "files": ["main.ts"],
+  "supportedTargets": ["microbit"]
+}
